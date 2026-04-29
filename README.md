@@ -1,4 +1,4 @@
-# Enterprise Auth Lab: Windows Server & AD DS Deployment
+# Enterprise Lab: Windows Server & AD DS Deployment
 
 ## Objective
 To depoy a functional Windows Domain environment using Windows Server 2022.
