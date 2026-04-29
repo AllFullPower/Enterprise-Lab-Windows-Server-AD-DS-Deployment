@@ -1,6 +1,29 @@
-# Active-Directory-and-Windows-Server-Setup
+# Enterprise Auth Lab: Windows Server & AD DS Deployment
+
+## Objective
+To depoy a functional Windows Domain environment using Windows Server 2022.
+- This project build upon my previous lab: [Linux Virtualization Host Setup](https://github.com/AllFullPower/Linux-Virtualization-Host-Setup-QEMU-KVM-)
+
+The goal was to implement centralized identity management and autometed network configuration (DHCP/DNS) for Windows 10 workstations. This infrastructure will be used for future labs.
+
+## Skills Learned
+- **Network Virtualization:** Configured isolated Virtual Networks and vNICs withing KVM simulating a physical corporate LAN.
+- **Infrastructure Services:** Deploying and authorizing a DHCP server to replace host-managed networking.
+- **Identity Management:** Installing a Domain Controller, managing the AD DS schema, and joininh workstations to the domain.
+- **Powershell Scripting:** Developing interactice CLI tools to manage Active Directory user creation and OUs.
+- **Data Parsing:** Automating data entry by processing external .txt files with Powershell.
+- **Identity Standarization:** Enforcing organizational naming conventions through Powershell. 
+
+  
 
 
+## Tools Used
+- **Host OS:** Bazzite Linux (Fedora Based).
+- **Hypervisor:** QEMU/KVM via Virtual Machine Manager.
+- **Server OS:** Windows Server 2022
+- **Client OS:** Windows 10 Pro
+- **Services:** AD DS, DHCP.
+- **Scripting and Automation:** Powershell Script.
 
 # Taken Steps
 Next, I will show the steps I took to setup this AD and Windows server enviroment for future labs.
