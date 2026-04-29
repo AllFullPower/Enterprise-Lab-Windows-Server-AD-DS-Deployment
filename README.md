@@ -2,17 +2,17 @@
 
 ## Objective
 To depoy a functional Windows Domain environment using Windows Server 2022.
-- This project build upon my previous lab: [Linux Virtualization Host Setup](https://github.com/AllFullPower/Linux-Virtualization-Host-Setup-QEMU-KVM-)
+- This project built upon my previous lab: [Linux Virtualization Host Setup](https://github.com/AllFullPower/Linux-Virtualization-Host-Setup-QEMU-KVM-)
 
 The goal was to implement centralized identity management and autometed network configuration (DHCP/DNS) for Windows 10 workstations. This infrastructure will be used for future labs.
 
 ## Skills Learned
 - **Network Virtualization:** Configured isolated Virtual Networks and vNICs withing KVM simulating a physical corporate LAN.
-- **Infrastructure Services:** Deploying and authorizing a DHCP server to replace host-managed networking.
-- **Identity Management:** Installing a Domain Controller, managing the AD DS schema, and joininh workstations to the domain.
-- **Powershell Scripting:** Developing interactice CLI tools to manage Active Directory user creation and OUs.
-- **Data Parsing:** Automating data entry by processing external .txt files with Powershell.
-- **Identity Standarization:** Enforcing organizational naming conventions through Powershell. 
+- **Infrastructure Services:** Deployed and authorized a DHCP server to replace host-managed networking.
+- **Identity Management:** Installed a Domain Controller, managing the AD DS schema, and joininh workstations to the domain.
+- **Powershell Scripting:** Developed interactice CLI tools to manage Active Directory user creation and OUs.
+- **Data Parsing:** Automated data entry by processing external .txt files with Powershell.
+- **Identity Standarization:** Enforced organizational naming conventions through Powershell. 
 
   
 
