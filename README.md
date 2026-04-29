@@ -107,7 +107,7 @@ Obtained an IP address and checking DNS configurations. I was able to:
 <br/>
 
 > Workstation Screenshot:
-<img width="940" height="770" alt="WorkstationScreen" src="https://github.com/user-attachments/assets/3001c921-c552-4acb-877b-b443828e693d" />
+<img width="938" height="592" alt="Screenshot_20260428_231628" src="https://github.com/user-attachments/assets/b23a826a-4d03-48f8-a9b6-889b81ae3d2f" />
 
 
 <br/>
