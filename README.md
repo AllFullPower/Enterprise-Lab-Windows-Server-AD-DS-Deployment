@@ -7,10 +7,10 @@ To depoy a functional Windows Domain environment using Windows Server 2022.
 The goal was to implement centralized identity management and autometed network configuration (DHCP/DNS) for Windows 10 workstations. This infrastructure will be used for future labs.
 
 ## Skills Learned
-- **Network Virtualization:** Configured isolated Virtual Networks and vNICs withing KVM simulating a physical corporate LAN.
+- **Network Virtualization:** Configured isolated Virtual Networks and vNICs within KVM simulating a physical corporate LAN.
 - **Infrastructure Services:** Deployed and authorized a DHCP server to replace host-managed networking.
-- **Identity Management:** Installed a Domain Controller, managing the AD DS schema, and joininh workstations to the domain.
-- **Powershell Scripting:** Developed interactice CLI tools to manage Active Directory user creation and OUs.
+- **Identity Management:** Installed a Domain Controller, managing the AD DS schema, and joining workstations to the domain.
+- **Powershell Scripting:** Developed interactive CLI tools to manage Active Directory user creation and OUs.
 - **Data Parsing:** Automated data entry by processing external .txt files with Powershell.
 - **Identity Standarization:** Enforced organizational naming conventions through Powershell. 
 
