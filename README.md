@@ -119,6 +119,7 @@ Created a Powershell Sript that helps with:
 - OU creation
 - Automation of multiple user creation.
 Improved the user creation time and automate large processes like onboarding a lot of users at once by using my previous programming knowledge.
+> Script: **interactive_user_creation.ps1**
 
 <br/>
 
@@ -162,6 +163,7 @@ First, I created 4 new User Groups:
 - Financial Department
 
 > I made a Powershell script that added a certain percentage of users to each group, it helped me optimizing almost a 90% percent of the time it would took me to do it manually.
+> Script: **Set_Random_Group_Script.ps1**
 <img width="689" height="490" alt="Pasted image 20260504205458" src="https://github.com/user-attachments/assets/e938d893-6e3c-4cb9-a08d-460b32da9c0c" />
 
 <img width="689" height="490" alt="Pasted image 20260504205520" src="https://github.com/user-attachments/assets/b5938816-326c-4be2-ade1-611b9ec570dc" />
@@ -172,7 +174,7 @@ First, I created 4 new User Groups:
 In order to apply Group Policies effectively, but I had one issue, it was that I had them all the users under the same OU, so I made a better OU order in which each department would have their own OU and Policies.
 
 > To optimized time and automate the process, I wrote a powershell script that moved every user to their corresponding OU based on the group they are in.
-
+> Script: **Move_Users_To_OUs.ps1**
 <img width="689" height="490" alt="Pasted image 20260504205426" src="https://github.com/user-attachments/assets/35081959-9f29-48c2-a9e0-f7068bf0ebdf" />
 
 <br/>
