@@ -10,11 +10,14 @@ The goal was to implement centralized identity management and autometed network 
 - **Network Virtualization:** Configured isolated Virtual Networks and vNICs within KVM simulating a physical corporate LAN.
 - **Infrastructure Services:** Deployed and authorized a DHCP server to replace host-managed networking.
 - **Identity Management:** Installed a Domain Controller, managing the AD DS schema, and joining workstations to the domain.
-- **Powershell Scripting:** Developed interactive CLI tools to manage Active Directory user creation and OUs.
+- **Powershell Scripting:** Developed interactive CLI tools to manage Active Directory user creation, group assignment and OUs management, reducing manual administration time by 90%. 
 - **Data Parsing:** Automated data entry by processing external .txt files with Powershell.
-- **Identity Standarization:** Enforced organizational naming conventions through Powershell. 
+- **Identity Standardization:** Enforced organizational naming conventions through Powershell.
+- **Directory Services:** Created a multi-OU structure to facilitate granular GPO application.
+- **Access Control & File Integrity:** Implemented Least Privilege models using NTFS and Share permissions this combining inheritance and explicit denials.
+- **Configuration Management:** Designed and deployed GPOs to standardized environment settings.
+<br/>
 
-  
 
 
 ## Tools Used
@@ -24,9 +27,14 @@ The goal was to implement centralized identity management and autometed network 
 - **Client OS:** Windows 10 Pro
 - **Services:** AD DS, DHCP.
 - **Scripting and Automation:** Powershell Script.
+- **Role-Based Access Control (RBAC):** Methodology used for folder permission.
+- **Group Policy Management Console (GPMC):** For orchestration of user/computer environments.
+- **NTFS Protocol:** For network file sharing.
+- **Powershell ISE:** For script development and debugging.
+<br/>
 
 # Taken Steps
-Next, I will show the steps I took to setup this AD and Windows server enviroment for future labs.
+This is the process that I followed in order to built my own AD infrastructure.
 
 ## Step 1: Windows Server Setup
 
@@ -138,6 +146,47 @@ Obtained an IP address and checking DNS configurations. I was able to:
 
 > Windows Server screenshot:
 <img width="940" height="770" alt="Pasted image 20260428210649" src="https://github.com/user-attachments/assets/cf9d485c-bce1-476c-a8a4-dd6ee461143b" />
+
+<br/>
+<br/>
+
+## Step 8: Shaping the AD infrastructure
+
+Group assignment 
+
+First, I created 4 new User Groups:
+- IT Department
+- HR Department
+- Customer Service Agents
+
+- Financial Department
+
+> I made a Powershell script that added a certain percentage of users to each group, it helped me optimizing almost a 90% percent of the time it would took me to do it manually.
+<img width="689" height="490" alt="Pasted image 20260504205458" src="https://github.com/user-attachments/assets/e938d893-6e3c-4cb9-a08d-460b32da9c0c" />
+
+<img width="689" height="490" alt="Pasted image 20260504205520" src="https://github.com/user-attachments/assets/b5938816-326c-4be2-ade1-611b9ec570dc" />
+
+<br/>
+<br/>
+
+In order to apply Group Policies effectively, but I had one issue, it was that I had them all the users under the same OU, so I made a better OU order in which each department would have their own OU and Policies.
+
+> To optimized time and automate the process, I wrote a powershell script that moved every user to their corresponding OU based on the group they are in.
+
+<img width="689" height="490" alt="Pasted image 20260504205426" src="https://github.com/user-attachments/assets/35081959-9f29-48c2-a9e0-f7068bf0ebdf" />
+
+<br/>
+<br/>
+
+Then, I created Group Policies and arranged them in order to be effectively applied to the groups I wanted. 
+
+<img width="953" height="679" alt="Pasted image 20260504203009" src="https://github.com/user-attachments/assets/0baefabc-a92a-4468-8f3f-dc61e13096d7" />
+
+<br/>
+<br/>
+
+Finally, I configured shared folders for each group and change their permissions using SHARED and NTFS permissions.
+<img width="949" height="802" alt="Pasted image 20260504203943" src="https://github.com/user-attachments/assets/9ae44049-b99d-4f50-a5a5-12baf3ff156e" />
 
 
 
