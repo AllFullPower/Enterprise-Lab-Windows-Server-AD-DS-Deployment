@@ -119,7 +119,7 @@ Created a Powershell Sript that helps with:
 - OU creation
 - Automation of multiple user creation.
 Improved the user creation time and automate large processes like onboarding a lot of users at once by using my previous programming knowledge.
-> Script: **interactive_user_creation.ps1**
+> Script: **Interactive_user_creation_scirpt.ps1**
 
 <br/>
 
