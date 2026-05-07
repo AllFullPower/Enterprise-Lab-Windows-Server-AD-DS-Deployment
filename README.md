@@ -191,8 +191,6 @@ Finally, I configured shared folders for each group and change their permissions
 <img width="949" height="802" alt="Pasted image 20260504203943" src="https://github.com/user-attachments/assets/9ae44049-b99d-4f50-a5a5-12baf3ff156e" />
 
 <br/>
-<br/>
-
 
 # More Labs
 This lab was used as infrastructure for this other project:
