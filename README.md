@@ -190,5 +190,13 @@ Then, I created Group Policies and arranged them in order to be effectively appl
 Finally, I configured shared folders for each group and change their permissions using SHARED and NTFS permissions.
 <img width="949" height="802" alt="Pasted image 20260504203943" src="https://github.com/user-attachments/assets/9ae44049-b99d-4f50-a5a5-12baf3ff156e" />
 
+<br/>
+<br/>
 
+
+# More Labs
+This lab was used as infrastructure for this other project:
+
+- <b>Enterprise Help Desk Lab with Active Directory</b>
+  - [Enterprise Help Desk Lab with Active Directory](https://github.com/AllFullPower/Ticketing-System-integration-with-AD-Environment)
 
