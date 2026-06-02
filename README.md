@@ -43,7 +43,7 @@ I Created an isolated virtual network for the VMs:
 <img width="799" height="629" alt="Pasted image 20260422200349" src="https://github.com/user-attachments/assets/9b3325f4-436a-4723-aeb8-95ac318f56d4" />
 <br/>
 <br/>
-I added the two NICs, one for internal communications and the other for internet access through NAT.
+I added the two NICs, one for internal communications and one more for internet access through NAT.
 <img width="1277" height="866" alt="Pasted image 20260422200520" src="https://github.com/user-attachments/assets/1b74f9c8-23a7-45ba-80d2-4ed8130c6d7b" />
 <br/>
 <br/>
@@ -59,7 +59,7 @@ I identified the adapters:
 - Inside adapter (Internal Communications).
 
 With the `ipconfig` command I identified the adapters:
-- Ethernet was the inside because it had an APIPA address due to a fail on DHCP.
+- Ethernet was the inside because it had an APIPA address due to a failure on DHCP.
 - Ethernet 2 was using a private IPv4 Address which means it was giving me internet connection. 
 <img width="1035" height="774" alt="Pasted image 20260422212329" src="https://github.com/user-attachments/assets/0e3bea6b-aa3f-4856-a451-6e8850c054e4" />
 <br/>
@@ -162,7 +162,7 @@ First, I created 4 new User Groups:
 
 - Financial Department
 
-> I made a Powershell script that added a certain percentage of users to each group, it helped me optimizing almost a 90% percent of the time it would took me to do it manually.
+> I made a Powershell script that added a certain percentage of users to each group, it helped me optimizing almost a 90% percent of the time that it would have taken me to do it manually.
 > Script: **Set_Random_Group_Script.ps1**
 <img width="689" height="490" alt="Pasted image 20260504205458" src="https://github.com/user-attachments/assets/e938d893-6e3c-4cb9-a08d-460b32da9c0c" />
 
