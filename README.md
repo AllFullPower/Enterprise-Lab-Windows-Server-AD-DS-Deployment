@@ -43,7 +43,7 @@ I Created an isolated virtual network for the VMs:
 <img width="799" height="629" alt="Pasted image 20260422200349" src="https://github.com/user-attachments/assets/9b3325f4-436a-4723-aeb8-95ac318f56d4" />
 <br/>
 <br/>
-I added the two NICs, one for internal communications and one more for internet access through NAT.
+I added the two NICs, one for internal communications and one more for internet access through RAS/NAT.
 <img width="1277" height="866" alt="Pasted image 20260422200520" src="https://github.com/user-attachments/assets/1b74f9c8-23a7-45ba-80d2-4ed8130c6d7b" />
 <br/>
 <br/>
@@ -54,13 +54,10 @@ Windows Sever VM successfully installed:
 <br/>
 
 ## Step 2: Windows Server Network Configuration
-I identified the adapters: 
-- Outside adapter with NAT (Connected to internet).
-- Inside adapter (Internal Communications).
 
-With the `ipconfig` command I identified the adapters:
-- Ethernet was the inside because it had an APIPA address due to a failure on DHCP.
-- Ethernet 2 was using a private IPv4 Address which means it was giving me internet connection. 
+With the `ipconfig` command I identified the interfaces:
+- Ethernet was the inside interface because it had an APIPA address due to a failure on DHCP.
+- Ethernet 2 was using a private IPv4 Address which means it was the outside interface giving me internet connection. 
 <img width="1035" height="774" alt="Pasted image 20260422212329" src="https://github.com/user-attachments/assets/0e3bea6b-aa3f-4856-a451-6e8850c054e4" />
 <br/>
 <br/>
@@ -93,13 +90,13 @@ Created an Admin Account:
 <br/>
 <br/>
 
-Installation completed:
+Configuration completed:
 <img width="1032" height="776" alt="Pasted image 20260422225025" src="https://github.com/user-attachments/assets/9f8d3a3a-acb7-4a2a-897b-cde352528c6a" />
 <br/>
 <br/>
 
 ## Step 5: DHCP Configuration
-Here are the configurations for the DHCP Server Scope:
+Here are the configurations for the DHCP Server:
 - Address Pool: 10.0.0.1 - 10.0.0.100
 - Reserved Addresses: 10.0.0.1 - 10.0.0.10
 - Default Gateway: 10.0.0.10
@@ -131,7 +128,7 @@ Improved the user creation time and automate large processes like onboarding a l
 <br/>
 
 ## Step 7: Adding a Workstation and obtaining IP from DHCP Server
-Obtained an IP address and checking DNS configurations. I was able to:
+Added a new workstation (A Windows 10 VM) and I was able to:
 - Login into an account made from the powershell script.
 - Get an IP address through DCHP.
 - Confirm the DNS configurations.
@@ -155,11 +152,10 @@ Obtained an IP address and checking DNS configurations. I was able to:
 
 Group assignment 
 
-First, I created 4 new User Groups:
+First, I created 4 new Security Groups:
 - IT Department
 - HR Department
 - Customer Service Agents
-
 - Financial Department
 
 > I made a Powershell script that added a certain percentage of users to each group, it helped me optimizing almost a 90% percent of the time that it would have taken me to do it manually.
@@ -171,7 +167,7 @@ First, I created 4 new User Groups:
 <br/>
 <br/>
 
-In order to apply Group Policies effectively, but I had one issue, it was that I had them all the users under the same OU, so I made a better OU order in which each department would have their own OU and Policies.
+All the security groups and users were under the same OU, so I created more OUs to reorder the structure and apply GPOs properly:
 
 > To optimized time and automate the process, I wrote a powershell script that moved every user to their corresponding OU based on the group they are in.
 > Script: **Move_Users_To_OUs.ps1**
@@ -180,20 +176,19 @@ In order to apply Group Policies effectively, but I had one issue, it was that I
 <br/>
 <br/>
 
-Then, I created Group Policies and arranged them in order to be effectively applied to the groups I wanted. 
-
+After an effective distribution of the Users, Security Groups, and Computers, I started assigning the GPOs:
 <img width="953" height="679" alt="Pasted image 20260504203009" src="https://github.com/user-attachments/assets/0baefabc-a92a-4468-8f3f-dc61e13096d7" />
 
 <br/>
 <br/>
 
-Finally, I configured shared folders for each group and change their permissions using SHARED and NTFS permissions.
+Finally, I configured a shared folder for each group and limited their access based on the user role (RBAC) using SHARED and NTFS permissions:
 <img width="949" height="802" alt="Pasted image 20260504203943" src="https://github.com/user-attachments/assets/9ae44049-b99d-4f50-a5a5-12baf3ff156e" />
 
 <br/>
 
 # More Labs
-This lab was used as infrastructure for this other project:
+This lab was used as infrastructure for this project:
 
 - <b>Enterprise Help Desk Lab with Active Directory</b>
   - [Enterprise Help Desk Lab with Active Directory](https://github.com/AllFullPower/Ticketing-System-integration-with-AD-Environment)
