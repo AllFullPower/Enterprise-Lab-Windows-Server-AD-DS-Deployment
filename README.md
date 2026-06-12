@@ -61,11 +61,11 @@ With the `ipconfig` command I identified the interfaces:
 <img width="1035" height="774" alt="Pasted image 20260422212329" src="https://github.com/user-attachments/assets/0e3bea6b-aa3f-4856-a451-6e8850c054e4" />
 <br/>
 <br/>
-I changed their named to identify them easily:
+I changed their name to identify them easily:
 <img width="1027" height="779" alt="Pasted image 20260422212429" src="https://github.com/user-attachments/assets/53df249b-c03c-4bbf-9c56-3d514fe77b07" />
 <br/>
 <br/>
-Applying the Right Network configurations to the internal network adapter:
+Applying the right network configurations to the internal network adapter:
 <img width="1032" height="776" alt="Pasted image 20260422214019" src="https://github.com/user-attachments/assets/fe8d547b-b65d-4c0b-be4b-0b3170b9d808" />
 <br/>
 <br/>
