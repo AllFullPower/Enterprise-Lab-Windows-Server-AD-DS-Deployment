@@ -43,7 +43,7 @@ I Created an isolated virtual network for the VMs:
 <img width="799" height="629" alt="Pasted image 20260422200349" src="https://github.com/user-attachments/assets/9b3325f4-436a-4723-aeb8-95ac318f56d4" />
 <br/>
 <br/>
-I added the two NICs, one for internal communications and one more for internet access through RAS/NAT.
+I added both NICs, one for internal communications and the other one for internet access through RAS/NAT.
 <img width="1277" height="866" alt="Pasted image 20260422200520" src="https://github.com/user-attachments/assets/1b74f9c8-23a7-45ba-80d2-4ed8130c6d7b" />
 <br/>
 <br/>
